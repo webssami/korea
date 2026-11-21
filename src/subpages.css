@@ -1,0 +1,322 @@
+.subpage { color: #10202d; background: #fff; }
+.sub-container { width: min(1280px, calc(100% - 48px)); margin-inline: auto; }
+.sub-hero { position: relative; height: 500px; overflow: hidden; background: #eef2f4; }
+.sub-hero > img { width: 100%; height: 100%; object-fit: cover; }
+.sub-hero-copy { position: absolute; top: 50%; left: max(24px, calc((100% - 1280px) / 2)); transform: translateY(-50%); max-width: 660px; }
+.sub-hero-copy.right { left: auto; right: max(24px, calc((100% - 1280px) / 2)); text-align: left; }
+.sub-hero-copy > span, .gold-label { color: #a88445; font-family: 'Noto Sans KR:Bold'; font-size: 13px; letter-spacing: .04em; }
+.sub-hero-copy h1 { margin: 14px 0 10px; font-family: 'Noto Sans KR:Bold'; font-size: 42px; line-height: 1.3; }
+.sub-hero-copy p { margin: 0; color: #5b6670; font-size: 16px; line-height: 1.65; }
+.sub-hero-copy > a { width: 200px; height: 44px; margin-top: 24px; color: #fff; background: #10202d; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: 'Noto Sans KR:Medium'; }
+.not-found { min-height: 100vh; display: grid; place-content: center; gap: 20px; text-align: center; }
+
+/* Makeup */
+.catalog-section { padding: 48px 0 88px; }
+.breadcrumb { display: flex; align-items: center; gap: 10px; margin-bottom: 42px; color: #4a5560; font-size: 14px; }
+.breadcrumb strong { color: #10202d; }
+.catalog-heading { display: flex; align-items: center; justify-content: space-between; }
+.catalog-heading h2 { margin: 0; font-family: 'Noto Sans KR:Bold'; font-size: 24px; }
+.catalog-heading > span { color: #7b8591; }
+.catalog-heading > span strong { color: #10202d; }
+.catalog-controls { margin: 20px 0 40px; padding-bottom: 24px; border-bottom: 1px solid #cfd3d9; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-chips button, .skin-type-filter button, .concern-buttons button { min-width: 62px; height: 36px; padding: 0 16px; border: 1.5px solid #cfd3d9; border-radius: 4px; color: #10202d; background: #fff; font-family: 'Noto Sans KR:Medium'; }
+.filter-chips button.selected, .skin-type-filter button.selected, .concern-buttons button.selected { color: #fff; border-color: #10202d; background: #10202d; }
+.catalog-search { display: flex; gap: 8px; }
+.catalog-search input, .catalog-search select { height: 40px; padding: 0 12px; border: 1px solid #cfd3d9; border-radius: 4px; background: #fff; outline: 0; }
+.catalog-search input { width: 180px; }
+.catalog-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 38px 24px; }
+.catalog-card { position: relative; border: 1px solid #e5e7eb; border-radius: 4px; overflow: hidden; background: #fff; }
+.catalog-card > a { display: block; }
+.catalog-image { position: relative; aspect-ratio: 1; overflow: hidden; background: #f5f5f5; }
+.catalog-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .25s; }
+.catalog-card:hover .catalog-image img { transform: scale(1.035); }
+.catalog-image b { position: absolute; top: 12px; left: 12px; padding: 5px 9px; color: #fff; background: #10202d; font-size: 11px; }
+.catalog-card > a > span { display: block; padding: 16px 16px 3px; color: #7b8591; font-family: 'Noto Sans KR:DemiLight'; font-size: 13px; }
+.catalog-card h3 { min-height: 54px; margin: 0; padding: 0 48px 16px 16px; font-family: 'Noto Sans KR:Regular'; font-size: 17px; line-height: 1.55; }
+.favorite { position: absolute; top: 10px; right: 10px; z-index: 2; width: 34px; height: 34px; padding: 0; border: 0; border-radius: 50%; background: rgba(255,255,255,.82); font-size: 23px; }
+.favorite.active { color: #a88445; background: #fff; }
+.empty-result { grid-column: 1 / -1; padding: 70px 0; color: #6b7480; text-align: center; }
+.makeup-mood { position: relative; overflow: hidden; padding-top: 35px; background: #f4f5f7; }
+.mood-surface { position: absolute; z-index: 0; top: 0; left: 50%; width: max(100%, 1920px); height: 570px; transform: translateX(-50%); }
+.makeup-mood .sub-container { position: relative; z-index: 1; }
+.mood-heading > span { color: #a88445; font-family: 'Noto Sans KR:Bold'; font-size: 20px; line-height: normal; }
+.makeup-mood .mood-heading h2 { margin: 2px 0 0; font-family: 'Noto Sans KR:Bold'; font-size: 32px; line-height: normal; }
+.mood-heading p { margin: 5px 0 0; color: #7b8591; font-family: 'Noto Sans KR:Regular'; font-size: 18px; line-height: normal; }
+.mood-grid { display: grid; grid-template-columns: repeat(4, 290px); gap: 40px; margin-top: 24px; }
+.mood-card, .mood-guide { position: relative; width: 290px; height: 382px; overflow: hidden; }
+.mood-card-shape, .mood-guide-shape { position: absolute; inset: 0; width: 290px; height: 382px; }
+.mood-card-decoration { position: absolute; pointer-events: none; }
+.mood-card-decoration-peach { top: 50px; left: 0; width: 290px; height: 186px; }
+.mood-card-decoration-rose { top: 18px; left: 41px; width: 208px; height: 167px; }
+.mood-card-decoration-sand { top: 62px; left: 0; width: 290px; height: 118px; }
+.mood-product { position: absolute; top: 157px; left: 68px; width: 154px; height: 155px; }
+.mood-product-frame { position: absolute; inset: 0; width: 154px; height: 155px; }
+.mood-product-image { position: absolute; top: 5px; left: 5px; width: 144px; height: 145px; border-radius: 50%; object-fit: cover; }
+.mood-card-copy { position: absolute; top: 326px; left: 0; width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.mood-card-copy strong { color: #10202d; font-family: 'Noto Sans KR:Bold'; font-size: 15px; line-height: normal; }
+.mood-card-copy span { margin-top: 7px; color: #4b5560; font-family: 'Noto Sans KR:Regular'; font-size: 13px; line-height: normal; }
+.mood-guide-copy { position: relative; z-index: 2; padding: 60px 30px 0; }
+.mood-guide-copy strong { display: block; color: #fff; font-family: 'Noto Sans KR:Bold'; font-size: 34px; line-height: 1.08; }
+.mood-guide-copy strong:nth-child(2) { margin-top: 4px; color: #c7a667; }
+.mood-guide-copy p { margin: 26px 0 0; color: #fff; font-family: 'Noto Sans KR:Regular'; font-size: 16px; line-height: 1.4; }
+.mood-guide-copy a { display: inline-block; margin-top: 25px; color: #c7a667; font-family: 'Noto Sans KR:Bold'; font-size: 16px; }
+.mood-guide-ring, .mood-guide-dot { position: absolute; z-index: 1; pointer-events: none; }
+.ring-large { right: 0; bottom: 12px; width: 144px; height: 158px; }
+.ring-small { right: 0; bottom: 13px; width: 108px; height: 119px; }
+.mood-guide-dot { right: 103px; bottom: 22px; width: 40px; height: 40px; }
+.tone-zone { position: relative; margin-top: 31px; padding-top: 9px;  clip-path: inset(0 -100vmax); margin-bottom: 31px}
+.tone-panel { position: relative; width: 100%; height: 151px; }
+.tone-panel-shape { position: absolute; inset: 0; width: 100%; height: 151px; }
+.tone-copy { position: absolute; top: 40px; left: 40px; display: flex; flex-direction: column; }
+.tone-copy strong { color: #10202d; font-family: 'Noto Sans KR:Bold'; font-size: 24px; line-height: normal; }
+.tone-copy span { margin-top: 8px; color: #7b8591; font-family: 'Noto Sans KR:Regular'; font-size: 18px; line-height: normal; }
+.tone-swatches { position: absolute; top: 31px; left: 412px; display: flex; gap: 30px; }
+.tone-swatches button { position: relative; width: 70px; height: 92px; padding: 0; border: 0; background: transparent; }
+.tone-color { position: absolute; top: 5px; left: 7px; width: 56px; height: 57px; }
+.tone-ring { position: absolute; z-index: 1; top: -2px; left: 0; width: 70px; height: 70px; }
+.tone-swatches span { position: absolute; bottom: 0; left: 0; width: 70px; color: #7b8591; font-family: 'Noto Sans KR:Regular'; font-size: 13px; text-align: center; }
+.tone-swatches button.selected span { color: #10202d; font-family: 'Noto Sans KR:Bold'; }
+.tone-check { position: absolute; top: 49px; right: 24px; width: 209px; height: 49px; padding: 0; border: 1px solid #10202d; border-radius: 4px; color: #0d1a24; background: #fff; font-family: 'Noto Sans KR:Bold'; font-size: 14px; }
+
+/* Diagnosis */
+.diagnosis-workspace { padding: 55px 0 100px; }
+.diagnosis-title { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px; }
+.diagnosis-title h2 { margin: 0 0 8px; font-family: 'Noto Sans KR:Bold'; font-size: 28px; }
+.diagnosis-title p { margin: 0; color: #7b8591; }
+.diagnosis-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(340px, 1.15fr); gap: 32px; align-items: start; }
+.skin-type-filter { padding: 22px 24px; border: 1px solid #e5e7eb; background: #f8f8f8; }
+.skin-type-filter > span { display: block; margin-bottom: 14px; color: #6b7480; }
+.skin-type-filter > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.skin-type-filter button { border-color: #10202d; }
+.recommend-line { padding: 28px 0 14px; border-bottom: 1px solid #e5e7eb; display: flex; justify-content: space-between; }
+.recommend-line span { color: #8f7233; }
+.skin-product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding-top: 24px; }
+.skin-product { border: 1px solid #cfd3d9; border-radius: 4px; overflow: hidden; transition: border-color .2s; }
+.skin-product.selected { border: 2px solid #8f7233; }
+.select-product { width: 100%; padding: 0; border: 0; background: #fff; text-align: left; }
+.select-product img { width: 100%; aspect-ratio: 1; object-fit: cover; background: #f7f7f7; }
+.select-product > span { display: block; padding: 13px 14px 0; color: #7b8591; font-size: 12px; }
+.select-product h3 { margin: 4px 14px; font-family: 'Noto Sans KR:Medium'; font-size: 15px; }
+.select-product p { min-height: 38px; margin: 0; padding: 0 14px; color: #7b8591; font-size: 12px; line-height: 1.5; }
+.select-product b { display: block; margin: 12px 14px 16px; color: #8f7233; font-size: 12px; }
+.diagnosis-panel { position: sticky; top: 18px; display: flex; flex-direction: column; gap: 18px; }
+.line-accordion, .diagnosis-search, .diagnosis-panel fieldset, .consult-box { border: 1px solid #cfd3d9; border-radius: 4px; background: #fff; }
+.line-accordion > button { width: 100%; height: 52px; padding: 0 16px; border: 0; background: transparent; display: flex; justify-content: space-between; align-items: center; }
+.line-accordion{margin-top: 10px;}
+.line-accordion > div { padding: 4px 16px 16px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.line-accordion label { display: flex; gap: 7px; font-size: 13px; }
+.diagnosis-search { padding: 12px 16px; display: flex; align-items: center; gap: 14px; }
+.diagnosis-search span { flex: 0 0 auto; color: #6b7480; font-size: 13px; }
+.diagnosis-search input { width: 100%; height: 34px; padding: 0 10px; border: 0; border-left: 1px solid #e5e7eb; outline: 0; }
+.today-skin { width: 100%; aspect-ratio: 1.65; object-fit: cover; border-radius: 4px; }
+.diagnosis-panel fieldset { margin: 0; padding: 18px; }
+.diagnosis-panel legend { padding: 0 5px; font-family: 'Noto Sans KR:Bold'; font-size: 14px; }
+.concern-buttons { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.concern-buttons button { min-width: 0; height: 44px; font-size: 13px; }
+.consult-box { padding: 24px; background: #f4f5f7; display: flex; flex-direction: column; gap: 7px; }
+.consult-box strong { font-size: 20px; }
+.consult-box small { color: #7b8591; }
+.diagnosis-reset-button { align-self: flex-end; padding: 6px 0; border: 0; border-bottom: 1px solid #10202d; background: transparent; cursor: pointer; }
+.diagnosis-heritage { position: relative; height: 520px; overflow: hidden; background: #ede4d6; }
+.diagnosis-heritage > img { width: 100%; height: 100%; object-fit: cover; }
+.diagnosis-heritage > div { position: absolute; top: 50%; left: max(24px, calc((100% - 1280px) / 2)); transform: translateY(-50%); }
+.diagnosis-heritage span { color: #8f7233; font-family: 'Inter:Bold'; font-size: 13px; letter-spacing: .08em; }
+.diagnosis-heritage h2 { margin: 12px 0 16px; font-family: 'Noto Serif KR:Medium'; font-size: 44px; line-height: 1.35; }
+.diagnosis-heritage p { color: #5b6670; line-height: 1.8; }
+.diagnosis-heritage button { margin-top: 14px; padding: 0 0 7px; border: 0; border-bottom: 1px solid #10202d; background: transparent; }
+.diagnosis-bottom { padding: 104px 24px 112px; background: #8b7f64; }
+.diagnosis-bottom-inner { width: min(1280px, 100%); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.65fr); align-items: center; gap: 56px; }
+.diagnosis-bottom-copy > span { color: #d7b66f; font-family: 'Inter:Bold'; font-size: 15px; }
+.diagnosis-bottom-copy h2 { margin: 14px 0 16px; color: #10202d; font-family: 'Noto Serif KR:Medium'; font-size: 44px; line-height: 1.35; }
+.diagnosis-bottom-copy p { margin: 0; color: #fff; font-size: 19px; line-height: 1.8; }
+.diagnosis-bottom-copy button { margin-top: 25px; padding: 0; border: 0; background: transparent; color: #d7b66f; font-family: 'Noto Sans KR:Bold'; font-size: 18px; cursor: pointer; }
+.diagnosis-line-stories { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.diagnosis-line-card { position: relative; min-width: 0; height: 462px; overflow: hidden; border: 1px solid #536274; background: rgba(224, 214, 193, 1); text-align: center; border-radius: 120px 120px 0 0;}
+.diagnosis-line-orbit { position: absolute; top: 46px; left: 50%; width: 124px; aspect-ratio: 1; transform: translateX(-50%); border: 1px solid #66717a; border-radius: 50%; }
+.diagnosis-line-orbit::before { position: absolute; top: 50%; left: 50%; width: 72px; aspect-ratio: 1; transform: translate(-50%, -50%); border: 1px solid #66717a; border-radius: 50%; content: ''; }
+.diagnosis-line-orbit span { position: absolute; top: 0; left: 50%; transform: translateX(-50%); color: #465a6d; font-family: 'Inter:Regular'; font-size: 14px; }
+.diagnosis-line-product { position: absolute; top: 166px; left: 50%; display: grid; width: 170px; aspect-ratio: 1; overflow: hidden; place-items: center; transform: translateX(-50%); border: 1px solid #536274; border-radius: 50%; background: #fff; box-shadow: 0 0 0 5px rgba(255, 255, 255, .9); }
+.diagnosis-line-product img { width: 84%; height: 84%; object-fit: contain; }
+.diagnosis-line-copy { position: absolute; right: 8px; bottom: 20px; left: 8px; color: #465a6d; }
+.diagnosis-line-copy h3 { margin: 0; font-family: 'Noto Serif KR:Medium'; font-size: 24px; font-weight: 500; line-height: 1.3; }
+.diagnosis-line-copy > span { display: block; margin-top: 2px; font-family: 'Inter:Bold'; font-size: 13px; }
+.diagnosis-line-copy p { margin: 7px 0 0; font-size: 13px; line-height: 1.5; }
+
+/* Ingredients */
+.ingredient-intro { padding: 44px 0 34px; text-align: center; }
+.ingredient-intro > h2 { margin: 0 0 34px; text-align: left; font-family: 'Noto Sans KR:Bold'; font-size: 32px; }
+.ingredient-intro > span { color: #7a858e; font-size: 17px; }
+.ingredient-intro > h1 { margin: 14px 0 8px; font-family: 'Noto Sans KR:Bold'; font-size: 42px; }
+.ingredient-intro > strong { color: #5b6670; font-family: 'Noto Sans KR:Regular'; font-weight: 400; }
+.ingredient-intro > p { max-width: 900px; margin: 24px auto 0; color: #5b6670; font-size: 16px; line-height: 1.8; }
+.barrier-process { padding: 25px 0 60px; text-align: center; }
+.barrier-process > h2, .microscope-section h2, .mle-components > h2 { margin: 0; font-family: 'Noto Sans KR:Bold'; font-size: 30px; }
+.barrier-process > p { margin: 8px 0 35px; color: #7a858e; }
+.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
+.process-grid article img { width: 100%; aspect-ratio: 1.22; object-fit: contain; }
+.process-grid h3 { margin: 16px 0 7px; font-family: 'Noto Sans KR:Bold'; font-size: 19px; }
+.process-grid p { max-width: 360px; margin: auto; color: #5b6670; line-height: 1.6; }
+.microscope-section { padding: 64px 0; background: #f4f5f7; text-align: center; }
+.microscope-section .sub-container > p { max-width: none; margin: 18px auto 36px; color: #5b6670; line-height: 1.7; white-space: nowrap; }
+.microscope-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; }
+.microscope-grid article h3 { margin: 0 0 18px; font-family: 'Noto Sans KR:Bold'; font-size: 18px; }
+.microscope-grid article img { width: 100%; aspect-ratio: 2.13; object-fit: cover; }
+.microscope-grid article > div { display: grid; grid-template-columns: 1fr 1fr; margin-top: 10px; color: #6b7480; }
+.mle-components { padding: 64px 0 90px; }
+.mle-components > h2 { text-align: center; }
+.component-diagram { max-width: 980px; margin: 40px auto 0;  grid-template-columns: 1.7fr 1fr; gap: 90px; align-items: center; }
+.molecule-stack { position: relative; display: flex; flex-direction: column; gap: 26px; }
+.molecule-row { display: flex; justify-content: space-around; align-items: center; min-height: 68px; }
+.molecule-row img { max-width: 22px; max-height: 66px; }
+.water-layer { position: absolute; left: 0; right: 0; top: 50%; width: 100%; transform: translateY(-50%); }
+.component-legend h3 { font-family: 'Inter:Bold'; font-size: 24px; }
+.component-legend > div { display: flex; align-items: center; gap: 16px; margin: 18px 0; }
+.component-legend > div img { max-width: 20px; max-height: 46px; }
+.component-legend p { margin: 0; display: flex; flex-direction: column; }
+.component-legend strong { font-family: 'Inter:Bold'; }
+.component-legend span { color: #6b7480; font-family: 'Inter:Regular'; font-size: 13px; }
+
+@media (max-width: 1100px) {
+  .sub-hero { height: 400px; }
+  .sub-hero-copy h1 { font-size: 34px; }
+  .catalog-grid { grid-template-columns: repeat(3, 1fr); }
+  .diagnosis-layout { grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr); }
+  .skin-product-grid { grid-template-columns: repeat(2, 1fr); }
+  .diagnosis-bottom-inner { grid-template-columns: 1fr; gap: 40px; }
+  .mood-grid { grid-template-columns: repeat(2, 290px); justify-content: center; }
+  .tone-panel { height: auto; min-height: 230px; }
+  .tone-panel-shape { height: 100%; object-fit: fill; }
+  .tone-swatches { top: 105px; left: 32px; }
+}
+
+@media (max-width: 767px) {
+  .sub-container { width: calc(100% - 30px); }
+  .sub-hero { height: 390px; }
+  .sub-hero > img { object-position: center; }
+  .makeup-hero > img { object-position: 77% center; }
+  .diagnosis-hero > img { object-position: 37% center; }
+  .sub-hero:after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,255,255,.83), rgba(255,255,255,.08)); }
+  .sub-hero-copy, .sub-hero-copy.right { z-index: 1; left: 20px; right: 20px; top: auto; bottom: 34px; transform: none; text-align: left; }
+  .sub-hero-copy h1 { font-size: 27px; }
+  .sub-hero-copy p { max-width: 290px; font-size: 13px; }
+  .sub-hero-copy > a { width: 150px; height: 42px; margin-top: 16px; }
+  .catalog-section { padding: 28px 0 50px; }
+  .breadcrumb { margin-bottom: 25px; font-size: 12px; }
+  .catalog-heading h2 { font-size: 22px; }
+  .catalog-controls { align-items: stretch; flex-direction: column; margin: 16px 0 25px; }
+  .filter-chips { flex-wrap: nowrap; padding-bottom: 6px; overflow-x: auto; scrollbar-width: none; }
+  .filter-chips button { flex: 0 0 auto; }
+  .catalog-search input { width: 100%; min-width: 0; }
+  .catalog-search select { flex: 0 0 92px; }
+  .catalog-grid { grid-template-columns: repeat(2, 1fr); gap: 18px 10px; }
+  .catalog-card > a > span { padding: 10px 10px 2px; font-size: 13px; }
+  .catalog-card h3 { min-height: 52px; padding: 0 32px 10px 10px; font-size: 14px; }
+  .favorite { width: 30px; height: 30px; font-size: 19px; }
+  .makeup-mood { padding-top: 32px; }
+  .mood-surface { height: 100%; }
+  .mood-heading > span { font-size: 15px; }
+  .makeup-mood .mood-heading h2 { margin-top: 4px; font-size: 24px; }
+  .mood-heading p { margin-top: 6px; font-size: 14px; }
+  .mood-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 25px; }
+  .mood-card, .mood-guide { width: 100%; height: auto; aspect-ratio: 290 / 382; }
+  .mood-card-shape, .mood-guide-shape { width: 100%; height: 100%; }
+  .mood-card-decoration-peach { top: 13%; width: 100%; height: auto; }
+  .mood-card-decoration-rose { top: 5%; left: 14%; width: 72%; height: auto; }
+  .mood-card-decoration-sand { top: 16%; width: 100%; height: auto; }
+  .mood-product { top: 36%; left: 23.5%; width: 53%; height: auto; aspect-ratio: 154 / 155; }
+  .mood-product-frame { width: 100%; height: 100%; }
+  .mood-product-image { top: 3.2%; left: 3.2%; width: 93.5%; height: 93.5%; }
+  .mood-card-copy { top: 81%; }
+  .mood-card-copy strong { font-size: 11px; }
+  .mood-card-copy span { margin-top: 3px; font-size: 13px; }
+  .mood-guide-copy { padding: 16% 10% 0; }
+  .mood-guide-copy strong { font-size: clamp(17px, 5.6vw, 25px); }
+  .mood-guide-copy p { margin-top: 12%; font-size: 13px; }
+  .mood-guide-copy a { margin-top: 12%; font-size: 13px; }
+  .ring-large { width: 50%; height: auto; }
+  .ring-small { width: 37%; height: auto; }
+  .mood-guide-dot { right: 35%; bottom: 6%; width: 14%; height: auto; }
+  .tone-zone { margin-top: 24px; padding: 15px 0; }
+  .tone-panel { min-height: 280px; }
+  .tone-copy { top: 28px; left: 24px; }
+  .tone-copy strong { font-size: 21px; }
+  .tone-copy span { font-size: 14px; }
+  .tone-swatches { top: 105px; left: 16px; right: 16px; gap: 0; justify-content: space-between; }
+  .tone-swatches button { width: 48px; height: 78px; }
+  .tone-color { top: 6px; left: 4px; width: 40px; height: 40px; }
+  .tone-ring { top: 2px; left: 0; width: 48px; height: 48px; }
+  .tone-swatches span { width: 48px; font-size: 12px; }
+  .tone-check { top: auto; right: 24px; bottom: 25px; left: 24px; width: auto; height: 44px; }
+
+  .diagnosis-workspace { padding: 35px 0 55px; }
+  .diagnosis-title { align-items: flex-start; flex-direction: column; gap: 18px; }
+  .diagnosis-title h2 { font-size: 23px; }
+  .diagnosis-layout { display: flex; flex-direction: column; }
+  .diagnosis-panel { position: static; order: -1; width: 100%; }
+  .skin-type-filter { padding: 18px 15px; }
+  .skin-type-filter > div { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .skin-type-filter button { flex: 0 0 auto; }
+  .skin-product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .select-product h3 { font-size: 14px; }
+  .select-product p { font-size: 12px; }
+  .concern-buttons { grid-template-columns: 1fr 1fr; }
+  .diagnosis-heritage { height: 420px; }
+  .diagnosis-heritage > img { object-position: 62% center; }
+  .diagnosis-heritage > div { left: 20px; }
+  .diagnosis-heritage h2 { font-size: 32px; }
+  .diagnosis-bottom { padding: 56px 20px; }
+  .diagnosis-bottom-inner { gap: 32px; }
+  .diagnosis-bottom-copy h2 { font-size: 32px; }
+  .diagnosis-bottom-copy p { font-size: 15px; }
+  .diagnosis-bottom-copy button { margin-top: 18px; font-size: 16px; }
+  .diagnosis-line-stories { grid-template-columns: 1fr; gap: 14px; }
+  .diagnosis-line-card { height: 184px; border-radius: 92px 3px 3px 92px; }
+  .diagnosis-line-orbit { top: 30px; left: 94px; width: 124px; }
+  .diagnosis-line-product { top: 38px; left: 94px; width: 108px; box-shadow: 0 0 0 4px rgba(255, 255, 255, .9); }
+  .diagnosis-line-copy { top: 50%; right: 16px; bottom: auto; left: 170px; transform: translateY(-50%); text-align: left; }
+  .diagnosis-line-copy h3 { font-size: 21px; }
+  .diagnosis-line-copy > span { font-size: 12px; }
+  .diagnosis-line-copy p { margin-top: 6px; font-size: 12px; }
+
+  .ingredients-hero > img { object-position: 64% center; }
+  .ingredient-intro { padding: 34px 0 20px; }
+  .ingredient-intro > h2 { margin-bottom: 28px; font-size: 23px; }
+  .ingredient-intro > h1 { font-size: 27px; }
+  .ingredient-intro > p { font-size: 14px; }
+  .barrier-process > h2, .microscope-section h2, .mle-components > h2 { font-size: 23px; }
+  .process-grid { grid-template-columns: 1fr; gap: 32px; }
+  .process-grid article img { max-height: 280px; }
+  .microscope-section { padding: 42px 0; }
+  .microscope-section .sub-container > p { white-space: normal; }
+  .microscope-grid { grid-template-columns: 1fr; gap: 38px; }
+  .mle-components { padding: 42px 0 55px; overflow: hidden; }
+  .component-diagram { grid-template-columns: 1fr; gap: 30px; }
+  .molecule-row img { transform: scale(.82); }
+  .component-legend { padding: 0 20px; }
+}
+
+@media (max-width: 770px) {
+  .makeup-hero-collection { display: block; }
+}
+
+@media (max-width: 780px) {
+  .makeup-hero > img { margin: -4px; }
+}
+
+@media (max-width: 630px) {
+  .filter-chips { flex-wrap: wrap; overflow-x: visible; }
+}
+
+@media (max-width: 419px) {
+  .makeup-hero-title-break { display: block; }
+}
+
+@media (max-width: 450px) {
+  .diagnosis-title h2 { font-size: 18px; }
+  .skin-type-filter > div { flex-wrap: wrap; overflow-x: visible; }
+}
+
+@media (max-width: 534px) {
+  .diagnosis-title-recommendation { display: block; }
+}
