@@ -11,7 +11,9 @@ export default defineConfig(({ mode }) => {
   const emitSourcemaps = mode === "development"
 
   return {
-    base: "/korea/",
+    base: process.env.NETLIFY === 'true'
+    ? '/'
+    : '/korea/',
     build: {
       sourcemap: emitSourcemaps ? "inline" : false,
       minify: !emitSourcemaps,
